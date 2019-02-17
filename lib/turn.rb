@@ -23,7 +23,11 @@ def input_to_index(user_input)
 end
 
 def move(board, index, value = "X")
+<<<<<<< HEAD
 board[index]  = value
+=======
+board[index] = value
+>>>>>>> 422ee7b765a05b5464e9426cfa6ad86915316f42
 return board 
 end
 
@@ -33,11 +37,18 @@ def turn(board)
   user_input = gets.strip
   index = input_to_index(user_input)
   if valid_move?(board, index)
+<<<<<<< HEAD
     move(board, index)
     display_board(board)
   else
   turn(board)
   end
+=======
+    move(board, index, value = "X")
+    turn(board)
+  end
+  display_board(board)
+>>>>>>> 422ee7b765a05b5464e9426cfa6ad86915316f42
 end
 
 #get input
